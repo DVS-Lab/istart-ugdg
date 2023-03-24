@@ -136,6 +136,8 @@ dmypy.json
 .heudiconv
 
 # imaging output
+masks/*.nii
+masks/*.nii.gz
 bids/**/*.nii.gz
 derivatives/fsl
 derivatives/fmriprep/**/*.nii.gz
