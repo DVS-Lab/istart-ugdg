@@ -33,17 +33,17 @@ ID_Measure_1 = COMPOSITE.Composite_SubstanceXReward;
 ID_Measure_1_name=' Composite_SubstanceXReward';
 ID_Measure_2 = COMPOSITE.Composite_SubstanceXReward_Squared;
 ID_Measure_2_name=' Composite_SubstanceXReward_Squared'
-rois= {'UGR_extract1', 'UGR_extract2','UGR_extract3', 'UGR_extract4', 'UGR_extract5', 'UGR_extract6', 'UGR_extract7', 'UGR_extract8'} %  'seed-NAcc-thr' 'seed-vmPFC-5mm-thr''seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {'_type-act_cov-COMPOSITE_model-GLM3_'}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
+rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-pTPJ-bin'}%  'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seeed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {'_type-ppi_seed-NAcc_cov-COMPOSITE_noINT_model-GLM3_'}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
 
 % Test hypotheses:
 
 H2 = 0; % Modulated and unmodulated cue activation. 
 H3 = 0; % Modulated and unmodulated choice activation. 
-H4 = 0; % Modulated and unmodulated NaCC PPI. 
+H4 = 1; % Modulated and unmodulated NaCC PPI. 
 H4_plot = 0; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
 H5 = 0; % Modulated and unmodulated analysis of ECN.
-E1 = 1; % Modulated exploratory results for UGR (Ishika analysis)
+E1 = 0; % Modulated exploratory results for UGR (Ishika analysis)
 
 modulated = 1;
 unmodulated = 0;
@@ -233,7 +233,7 @@ end
 
     if E1 == 1
         if modulated == 1
-            EV_UGR = load(/data)
+            %EV_UGR = load(/data)
             name = 'Act_modulated_exploratory_choice_results';
             cope_UGR={'cope-15.txt'};
             for ii = 1:length(models)

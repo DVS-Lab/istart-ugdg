@@ -24,7 +24,7 @@ model=19
 
 # sub 1243 has a slightly different mask due to different dimensions (SAR limit exceeded)
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ]; then
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'NAcc-bin'] ]; then
 maskname="NAcc-1243-bin"
 echo "Mask for 1243 is $maskname"
 else

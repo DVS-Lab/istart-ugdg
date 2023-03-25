@@ -46,10 +46,10 @@ maindir="$(dirname "$scriptdir")"
 # base paths
 
 # Inputs
-L3_model_dir=L3_task-ugdg_model-19_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
-TYPE=act #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
+L3_model_dir=L3_task-ugdg_model-19_COMPOSITE_noINT_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
+TYPE=ppi_seed-NAcc #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
 N=54
-cov=COMPOSITE #_noINT
+cov=COMPOSITE_noINT #_noINT
 
 # Outputs
 
@@ -65,7 +65,7 @@ outputdir=${maindir}/derivatives/imaging_plots
 mkdir -p $outputdir
 
 # activation: ROI name and other path information
-for ROI in 'UGR_extract1' 'UGR_extract2' 'UGR_extract3' 'UGR_extract4' 'UGR_extract5' 'UGR_extract6' 'UGR_extract7' 'UGR_extract8'; do  #'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin'; do 
+for ROI in 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin'; do 
 #mask_act-no-int_cope-15_ugrpmod_zstat-14' 'mask_act-no-int_cope-9_ugppmod_zstat-4' 'mask_ppi-no-int_cope-14_ugpchoicepmod_zstat5' 'mask_act-no-int_cope-7_dgpcuepmod_zstat-10' 'mask_ppi-no-int_cope-11_dgppmod_zstat-10'  'mask_ppi-no-int_cope-7_dgpendowpmod_zstat-5'; do  #'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-thr' #'seed-dlPFC-UGR-bin'; do #
 	MASK=${maindir}/masks/${ROI}.nii.gz #masks_jbw3/
 	for COPENUM in 1 2 3 4 5 6 7 8 9 11 13 14 15; do # act
