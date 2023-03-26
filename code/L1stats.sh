@@ -215,7 +215,8 @@ ln -s $FSLDIR/etc/flirtsch/ident.mat ${OUTPUT}.feat/reg/standard2example_func.ma
 
 # reslice correctly for the one weird case
 if [ $sub -eq 1243 ] && [ $run -eq 1 ]; then
-     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${TYPE}_seed-${ppi}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
+     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${TYPE}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
+   
 else
      ln -s ${OUTPUT}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
 fi

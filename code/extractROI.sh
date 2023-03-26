@@ -46,10 +46,10 @@ maindir="$(dirname "$scriptdir")"
 # base paths
 
 # Inputs
-L3_model_dir=L3_task-ugdg_model-19_COMPOSITE_noINT_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
-TYPE=ppi_seed-NAcc #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
+L3_model_dir=L3_task-ugdg_model-19_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
+TYPE=act #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
 N=54
-cov=COMPOSITE_noINT #_noINT
+cov=COMPOSITE #_noINT
 
 # Outputs
 
