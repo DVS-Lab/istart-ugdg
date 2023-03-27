@@ -33,8 +33,8 @@ ID_Measure_1 = COMPOSITE.Composite_SubstanceXReward;
 ID_Measure_1_name=' Composite_SubstanceXReward';
 ID_Measure_2 = COMPOSITE.Composite_SubstanceXReward_Squared;
 ID_Measure_2_name=' Composite_SubstanceXReward_Squared'
-rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-pTPJ-bin'  'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {'_type-act_cov-COMPOSITE_model-GLM3_'}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
+rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-pTPJ-bin' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
 
 % Test hypotheses:
 
