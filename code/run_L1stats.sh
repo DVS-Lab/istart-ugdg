@@ -6,7 +6,7 @@ basedir="$(dirname "$scriptdir")"
 nruns=2
 task=ugdg # edit if necessary
 
-for ppi in 0; do # putting 0 first will indicate "activation" Put in "NAcc-bin" for PPI 
+for ppi in "ecn"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" for PPI 
 
 	for sub in `cat ${scriptdir}/newsubs.txt`; do 
 	  for run in `seq $nruns`; do
