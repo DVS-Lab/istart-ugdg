@@ -1,0 +1,317 @@
+[Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click <a href="matlab:opengl('problems')">here</a>.] 
+seed-NAcc-thr DGP different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.1373
+
+
+ci =
+
+   -0.0545
+    0.3853
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 1.5087
+       df: 53
+       sd: 0.8057
+
+seed-NAcc-thr UGP different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.6440
+
+
+ci =
+
+   -0.2816
+    0.1757
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.4648
+       df: 53
+       sd: 0.8377
+
+seed-NAcc-thr UGR different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.9137
+
+
+ci =
+
+   -0.1855
+    0.2068
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 0.1089
+       df: 53
+       sd: 0.7185
+
+seed-NAcc-thr DGP > UGP?
+
+h =
+
+     0
+
+
+p =
+
+    0.1713
+
+
+ci =
+
+   -0.0975
+    0.5342
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 1.3869
+       df: 53
+       sd: 1.1572
+
+seed-NAcc-thr DGP > UGR?
+
+h =
+
+     0
+
+
+p =
+
+    0.2505
+
+
+ci =
+
+   -0.1124
+    0.4220
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 1.1617
+       df: 53
+       sd: 0.9789
+
+seed-NAcc-thr DGP, UGP, and/or UGR different?
+
+p =
+
+    0.3372
+
+
+tb1 =
+
+  4×6 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Source' }    {'SS'      }    {'df' }    {'MS'      }    {'F'       }    {'Prob>F'  }
+    {'Columns'}    {[  1.3625]}    {[  2]}    {[  0.6812]}    {[  1.0946]}    {[  0.3372]}
+    {'Error'  }    {[ 98.9518]}    {[159]}    {[  0.6223]}    {0×0 double}    {0×0 double}
+    {'Total'  }    {[100.3143]}    {[161]}    {0×0 double}    {0×0 double}    {0×0 double}
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    gnames: [3×1 char]
+         n: [54 54 54]
+    source: 'anova1'
+     means: [0.1654 -0.0530 0.0106]
+        df: 159
+         s: 0.7889
+
+seed-vmPFC-5mm-thr DGP different from zero?
+
+h =
+
+     1
+
+
+p =
+
+    0.0387
+
+
+ci =
+
+    0.0165
+    0.5996
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 2.1196
+       df: 53
+       sd: 1.0681
+
+seed-vmPFC-5mm-thr UGP different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.9029
+
+
+ci =
+
+   -0.2248
+    0.1989
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.1226
+       df: 53
+       sd: 0.7761
+
+seed-vmPFC-5mm-thr UGR different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.7005
+
+
+ci =
+
+   -0.3020
+    0.2044
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.3868
+       df: 53
+       sd: 0.9276
+
+seed-vmPFC-5mm-thr DGP > UGP?
+
+h =
+
+     0
+
+
+p =
+
+    0.0745
+
+
+ci =
+
+   -0.0328
+    0.6749
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 1.8196
+       df: 53
+       sd: 1.2964
+
+seed-vmPFC-5mm-thr DGP > UGR?
+
+h =
+
+     0
+
+
+p =
+
+    0.0760
+
+
+ci =
+
+   -0.0386
+    0.7524
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 1.8098
+       df: 53
+       sd: 1.4491
+
+seed-vmPFC-5mm-thr DGP, UGP, and/or UGR different?
+
+p =
+
+    0.0937
+
+
+tb1 =
+
+  4×6 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Source' }    {'SS'      }    {'df' }    {'MS'      }    {'F'       }    {'Prob>F'  }
+    {'Columns'}    {[  4.1709]}    {[  2]}    {[  2.0855]}    {[  2.4030]}    {[  0.0937]}
+    {'Error'  }    {[137.9865]}    {[159]}    {[  0.8678]}    {0×0 double}    {0×0 double}
+    {'Total'  }    {[142.1575]}    {[161]}    {0×0 double}    {0×0 double}    {0×0 double}
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    gnames: [3×1 char]
+         n: [54 54 54]
+    source: 'anova1'
+     means: [0.3081 -0.0129 -0.0488]
+        df: 159
+         s: 0.9316
+
