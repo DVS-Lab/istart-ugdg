@@ -292,12 +292,9 @@ MonetaryDifference = UG_P_Raw_Offers- DG_P_Offers;
 ProportionDifference = UG_P_Raw_Props- DG_P_Prop;
 
 outputstrat= [values, PercentChange, MonetaryDifference, ProportionDifference];
-outputstrattotable = array2table(outputstrat(1:end,:),'VariableNames', {'Subject', 'Percent', 'Raw', 'Proportion'});
-
-
-name = ('\strategic_behavior.xls');
-fileoutput = [currentdir, name];
-writetable(outputstrattotable , fileoutput);
+name = ('strategic_behavior.xls');
+fileoutput = [output_path, name];
+writetable(final_output_reward, fileoutput);
 
 %% UG_R earnings
 
