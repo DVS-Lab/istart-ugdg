@@ -102,7 +102,7 @@ if H2 == 1
     %% H2 Act Unmodulated Cue Phase
     
     if unmodulated == 1
-        name = 'Act_unmodulated_choice_results';
+        name = 'Act_unmodulated_cue_results';
         cope_DGP={'cope-01.txt'};
         cope_UGP={'cope-02.txt'};
         cope_UGR={'cope-03.txt'};
@@ -116,9 +116,9 @@ end
 if H3 == 1
     if modulated == 1
         name = 'Act_modulated_choice_results';
-        cope_DGP={'cope-13.txt'};
-        cope_UGP={'cope-14.txt'};
-        cope_UGR={'cope-15.txt'};
+        cope_DGP={'cope-10.txt'};
+        cope_UGP={'cope-11.txt'};
+        cope_UGR={'cope-12.txt'};
         type=' act';
         plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
     end
@@ -140,9 +140,9 @@ end
 if H4 == 1
     if modulated == 1
         name = 'PPI_modulated_choice_results'
-        cope_DGP={'cope-13.txt'};
-        cope_UGP={'cope-14.txt'};
-        cope_UGR={'cope-15.txt'};
+        cope_DGP={'cope-10.txt'};
+        cope_UGP={'cope-11.txt'};
+        cope_UGR={'cope-12.txt'};
         type=' ppi NAcc';
         plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
     end
@@ -151,9 +151,9 @@ if H4 == 1
     
     if unmodulated == 1
         name = 'PPI_unmodulated_choice_results';
-        cope_DGP={'cope-01.txt'};
-        cope_UGP={'cope-02.txt'};
-        cope_UGR={'cope-03.txt'};
+        cope_DGP={'cope-04.txt'};
+        cope_UGP={'cope-05.txt'};
+        cope_UGR={'cope-06.txt'};
         type=' ppi NAcc'; 
         plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
     end
@@ -163,8 +163,8 @@ end
 
 if H4_plot == 1
     if modulated == 1
-        Cope_DGP={'cope-13.txt'};
-        Cope_UGP={'cope-14.txt'};
+        Cope_DGP={'cope-10.txt'};
+        Cope_UGP={'cope-11.txt'};
 
         name = 'PPI_modulated_choice_results';
         type=' ppi NAcc'; 
@@ -181,8 +181,8 @@ if H4_plot == 1
 
         for jj = 1:length(rois)
         
-        DGP={'cope-13.txt'};
-        UGP={'cope-14.txt'};
+        DGP={'cope-10.txt'};
+        UGP={'cope-11.txt'};
 
         name = 'PPI_unmodulated_choice_results';
         type=' ppi NAcc'; 
@@ -207,9 +207,9 @@ if H5 == 1
         
         name = 'ECN_modulated_choice_results';
         
-        cope_DGP={'cope-13.txt'};
-        cope_UGP={'cope-14.txt'};
-        cope_UGR={'cope-15.txt'};
+        cope_DGP={'cope-10.txt'};
+        cope_UGP={'cope-11.txt'};
+        cope_UGR={'cope-12.txt'};
         
         type=' ecn nppi';
         
@@ -235,7 +235,7 @@ end
         if modulated == 1
             %EV_UGR = load(/data)
             name = 'Act_modulated_exploratory_choice_results';
-            cope_UGR={'cope-15.txt'};
+            cope_UGR={'cope-12.txt'};
             for ii = 1:length(models)
                 model=models(ii)
                 for jj = 6 %1:length(rois)

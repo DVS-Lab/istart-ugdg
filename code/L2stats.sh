@@ -10,7 +10,7 @@ type=$2
 task=ugdg # edit if necessary
 sm=5 # edit if necessary
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
-model=19
+model=1
 NCOPES=16 #Should not be necessary to adjust for PPI.
 
 

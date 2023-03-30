@@ -28,10 +28,10 @@ type=${REPLACEME} # For output template
 # Variables that change per analysis. Check carefully! 
 covariate=COMPOSITE_noINT #_noINT
 N=54
-template=L3_task-ugdg_COMPOSITE_noINT_n54_flame1_nppi.fsf # L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf
+template=L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf # L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf
 
 # Set once and then forget.
-model=19
+model=1
 task=ugdg
 modeltype=flame1
 templatedir="/data/projects/istart-ugdg/templates"

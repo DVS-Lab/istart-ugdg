@@ -273,166 +273,166 @@ set fmri(totalVoxels) 325325
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "/data/projects/istart-ugdg/derivatives/fsl/sub-1003/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(1) "/data/projects/istart-ugdg/derivatives/fsl/sub-1003/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1"
 
 # 4D AVW data or FEAT directory (2)
-set feat_files(2) "/data/projects/istart-ugdg/derivatives/fsl/sub-1004/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(2) "/data/projects/istart-ugdg/derivatives/fsl/sub-1004/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (3)
-set feat_files(3) "/data/projects/istart-ugdg/derivatives/fsl/sub-1006/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(3) "/data/projects/istart-ugdg/derivatives/fsl/sub-1006/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (4)
-set feat_files(4) "/data/projects/istart-ugdg/derivatives/fsl/sub-1009/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(4) "/data/projects/istart-ugdg/derivatives/fsl/sub-1009/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (5)
-set feat_files(5) "/data/projects/istart-ugdg/derivatives/fsl/sub-1010/L1_task-ugdg_model-19_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
+set feat_files(5) "/data/projects/istart-ugdg/derivatives/fsl/sub-1010/L1_task-ugdg_model-1_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
 
 # 4D AVW data or FEAT directory (6)
-set feat_files(6) "/data/projects/istart-ugdg/derivatives/fsl/sub-1011/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(6) "/data/projects/istart-ugdg/derivatives/fsl/sub-1011/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (7)
-set feat_files(7) "/data/projects/istart-ugdg/derivatives/fsl/sub-1012/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(7) "/data/projects/istart-ugdg/derivatives/fsl/sub-1012/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (8)
-set feat_files(8) "/data/projects/istart-ugdg/derivatives/fsl/sub-1013/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(8) "/data/projects/istart-ugdg/derivatives/fsl/sub-1013/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (9)
-set feat_files(9) "/data/projects/istart-ugdg/derivatives/fsl/sub-1015/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(9) "/data/projects/istart-ugdg/derivatives/fsl/sub-1015/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (10)
-set feat_files(10) "/data/projects/istart-ugdg/derivatives/fsl/sub-1016/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(10) "/data/projects/istart-ugdg/derivatives/fsl/sub-1016/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (11)
-set feat_files(11) "/data/projects/istart-ugdg/derivatives/fsl/sub-1019/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(11) "/data/projects/istart-ugdg/derivatives/fsl/sub-1019/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (12)
-set feat_files(12) "/data/projects/istart-ugdg/derivatives/fsl/sub-1021/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(12) "/data/projects/istart-ugdg/derivatives/fsl/sub-1021/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (13)
-set feat_files(13) "/data/projects/istart-ugdg/derivatives/fsl/sub-1242/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(13) "/data/projects/istart-ugdg/derivatives/fsl/sub-1242/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (14)
-set feat_files(14) "/data/projects/istart-ugdg/derivatives/fsl/sub-1243/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(14) "/data/projects/istart-ugdg/derivatives/fsl/sub-1243/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (15)
-set feat_files(15) "/data/projects/istart-ugdg/derivatives/fsl/sub-1244/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(15) "/data/projects/istart-ugdg/derivatives/fsl/sub-1244/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (16)
-set feat_files(16) "/data/projects/istart-ugdg/derivatives/fsl/sub-1245/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(16) "/data/projects/istart-ugdg/derivatives/fsl/sub-1245/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (17)
-set feat_files(17) "/data/projects/istart-ugdg/derivatives/fsl/sub-1247/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(17) "/data/projects/istart-ugdg/derivatives/fsl/sub-1247/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (18)
-set feat_files(18) "/data/projects/istart-ugdg/derivatives/fsl/sub-1248/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(18) "/data/projects/istart-ugdg/derivatives/fsl/sub-1248/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (19)
-set feat_files(19) "/data/projects/istart-ugdg/derivatives/fsl/sub-1249/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(19) "/data/projects/istart-ugdg/derivatives/fsl/sub-1249/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (20)
-set feat_files(20) "/data/projects/istart-ugdg/derivatives/fsl/sub-1251/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(20) "/data/projects/istart-ugdg/derivatives/fsl/sub-1251/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (21)
-set feat_files(21) "/data/projects/istart-ugdg/derivatives/fsl/sub-1253/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(21) "/data/projects/istart-ugdg/derivatives/fsl/sub-1253/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (22)
-set feat_files(22) "/data/projects/istart-ugdg/derivatives/fsl/sub-1255/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(22) "/data/projects/istart-ugdg/derivatives/fsl/sub-1255/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (23)
-set feat_files(23) "/data/projects/istart-ugdg/derivatives/fsl/sub-1276/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(23) "/data/projects/istart-ugdg/derivatives/fsl/sub-1276/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (24)
-set feat_files(24) "/data/projects/istart-ugdg/derivatives/fsl/sub-1282/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(24) "/data/projects/istart-ugdg/derivatives/fsl/sub-1282/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (25)
-set feat_files(25) "/data/projects/istart-ugdg/derivatives/fsl/sub-1286/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(25) "/data/projects/istart-ugdg/derivatives/fsl/sub-1286/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (26)
-set feat_files(26) "/data/projects/istart-ugdg/derivatives/fsl/sub-1294/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(26) "/data/projects/istart-ugdg/derivatives/fsl/sub-1294/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (27)
-set feat_files(27) "/data/projects/istart-ugdg/derivatives/fsl/sub-1300/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(27) "/data/projects/istart-ugdg/derivatives/fsl/sub-1300/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (28)
-set feat_files(28) "/data/projects/istart-ugdg/derivatives/fsl/sub-1301/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(28) "/data/projects/istart-ugdg/derivatives/fsl/sub-1301/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (29)
-set feat_files(29) "/data/projects/istart-ugdg/derivatives/fsl/sub-1302/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(29) "/data/projects/istart-ugdg/derivatives/fsl/sub-1302/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (30)
-set feat_files(30) "/data/projects/istart-ugdg/derivatives/fsl/sub-1303/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(30) "/data/projects/istart-ugdg/derivatives/fsl/sub-1303/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (31)
-set feat_files(31) "/data/projects/istart-ugdg/derivatives/fsl/sub-3101/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(31) "/data/projects/istart-ugdg/derivatives/fsl/sub-3101/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (32)
-set feat_files(32) "/data/projects/istart-ugdg/derivatives/fsl/sub-3116/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(32) "/data/projects/istart-ugdg/derivatives/fsl/sub-3116/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (33)
-set feat_files(33) "/data/projects/istart-ugdg/derivatives/fsl/sub-3122/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(33) "/data/projects/istart-ugdg/derivatives/fsl/sub-3122/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (34)
-set feat_files(34) "/data/projects/istart-ugdg/derivatives/fsl/sub-3125/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(34) "/data/projects/istart-ugdg/derivatives/fsl/sub-3125/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (35)
-set feat_files(35) "/data/projects/istart-ugdg/derivatives/fsl/sub-3140/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(35) "/data/projects/istart-ugdg/derivatives/fsl/sub-3140/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (36)
-set feat_files(36) "/data/projects/istart-ugdg/derivatives/fsl/sub-3143/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(36) "/data/projects/istart-ugdg/derivatives/fsl/sub-3143/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (37)
-set feat_files(37) "/data/projects/istart-ugdg/derivatives/fsl/sub-3152/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(37) "/data/projects/istart-ugdg/derivatives/fsl/sub-3152/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (38)
-set feat_files(38) "/data/projects/istart-ugdg/derivatives/fsl/sub-3164/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(38) "/data/projects/istart-ugdg/derivatives/fsl/sub-3164/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (39)
-set feat_files(39) "/data/projects/istart-ugdg/derivatives/fsl/sub-3166/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(39) "/data/projects/istart-ugdg/derivatives/fsl/sub-3166/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (40)
-set feat_files(40) "/data/projects/istart-ugdg/derivatives/fsl/sub-3167/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(40) "/data/projects/istart-ugdg/derivatives/fsl/sub-3167/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (41)
-set feat_files(41) "/data/projects/istart-ugdg/derivatives/fsl/sub-3170/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(41) "/data/projects/istart-ugdg/derivatives/fsl/sub-3170/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (42)
-set feat_files(42) "/data/projects/istart-ugdg/derivatives/fsl/sub-3173/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(42) "/data/projects/istart-ugdg/derivatives/fsl/sub-3173/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (43)
-set feat_files(43) "/data/projects/istart-ugdg/derivatives/fsl/sub-3175/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(43) "/data/projects/istart-ugdg/derivatives/fsl/sub-3175/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (44)
-set feat_files(44) "/data/projects/istart-ugdg/derivatives/fsl/sub-3176/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(44) "/data/projects/istart-ugdg/derivatives/fsl/sub-3176/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (45)
-set feat_files(45) "/data/projects/istart-ugdg/derivatives/fsl/sub-3189/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(45) "/data/projects/istart-ugdg/derivatives/fsl/sub-3189/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (46)
-set feat_files(46) "/data/projects/istart-ugdg/derivatives/fsl/sub-3190/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(46) "/data/projects/istart-ugdg/derivatives/fsl/sub-3190/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (47)
-set feat_files(47) "/data/projects/istart-ugdg/derivatives/fsl/sub-3199/L1_task-ugdg_model-19_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
+set feat_files(47) "/data/projects/istart-ugdg/derivatives/fsl/sub-3199/L1_task-ugdg_model-1_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
 
 # 4D AVW data or FEAT directory (48)
-set feat_files(48) "/data/projects/istart-ugdg/derivatives/fsl/sub-3200/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(48) "/data/projects/istart-ugdg/derivatives/fsl/sub-3200/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (49)
-set feat_files(49) "/data/projects/istart-ugdg/derivatives/fsl/sub-3206/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(49) "/data/projects/istart-ugdg/derivatives/fsl/sub-3206/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (50)
-set feat_files(50) "/data/projects/istart-ugdg/derivatives/fsl/sub-3210/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(50) "/data/projects/istart-ugdg/derivatives/fsl/sub-3210/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (51)
-set feat_files(51) "/data/projects/istart-ugdg/derivatives/fsl/sub-3212/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(51) "/data/projects/istart-ugdg/derivatives/fsl/sub-3212/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (52)
-set feat_files(52) "/data/projects/istart-ugdg/derivatives/fsl/sub-3218/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(52) "/data/projects/istart-ugdg/derivatives/fsl/sub-3218/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (53)
-set feat_files(53) "/data/projects/istart-ugdg/derivatives/fsl/sub-3220/L2_task-ugdg_model-19_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
+set feat_files(53) "/data/projects/istart-ugdg/derivatives/fsl/sub-3220/L2_task-ugdg_model-1_type-REPLACEME_sm-5.gfeat/copeCOPENUM.feat/stats/cope1.nii.gz"
 
 # 4D AVW data or FEAT directory (54)
-set feat_files(54) "/data/projects/istart-ugdg/derivatives/fsl/sub-3223/L1_task-ugdg_model-19_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
+set feat_files(54) "/data/projects/istart-ugdg/derivatives/fsl/sub-3223/L1_task-ugdg_model-1_type-REPLACEME_run-1_sm-5.feat/stats/copeCOPENUM.nii.gz"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
@@ -880,7 +880,7 @@ set fmri(evg53.2) -1.9841846693
 set fmri(evg54.2) 0.7544516943
 
 # EV 3 title
-set fmri(evtitle3) "comp rs 1stcomp su"
+set fmri(evtitle3) "comp su"
 
 # Basic waveform shape (EV 3)
 # 0 : Square
@@ -2195,7 +2195,7 @@ set fmri(con_real2.1) 0
 set fmri(con_real2.2) 1.0
 
 # Real contrast_real vector 2 element 3
-set fmri(con_real2.3) 0
+set fmri(con_real2.3) 0.0
 
 # Real contrast_real vector 2 element 4
 set fmri(con_real2.4) 0
@@ -2225,7 +2225,7 @@ set fmri(con_real3.2) 0
 set fmri(con_real3.3) 1.0
 
 # Real contrast_real vector 3 element 4
-set fmri(con_real3.4) 0
+set fmri(con_real3.4) 0.0
 
 # Real contrast_real vector 3 element 5
 set fmri(con_real3.5) 0
@@ -2243,7 +2243,7 @@ set fmri(conpic_real.4) 1
 set fmri(conname_real.4) "rs 1st"
 
 # Real contrast_real vector 4 element 1
-set fmri(con_real4.1) 0.0
+set fmri(con_real4.1) 0
 
 # Real contrast_real vector 4 element 2
 set fmri(con_real4.2) 0
@@ -2255,7 +2255,7 @@ set fmri(con_real4.3) 0
 set fmri(con_real4.4) 1.0
 
 # Real contrast_real vector 4 element 5
-set fmri(con_real4.5) 0
+set fmri(con_real4.5) 0.0
 
 # Real contrast_real vector 4 element 6
 set fmri(con_real4.6) 0
@@ -2270,10 +2270,10 @@ set fmri(conpic_real.5) 1
 set fmri(conname_real.5) "rs 2nd"
 
 # Real contrast_real vector 5 element 1
-set fmri(con_real5.1) 0.0
+set fmri(con_real5.1) 0
 
 # Real contrast_real vector 5 element 2
-set fmri(con_real5.2) 0.0
+set fmri(con_real5.2) 0
 
 # Real contrast_real vector 5 element 3
 set fmri(con_real5.3) 0
@@ -2285,7 +2285,7 @@ set fmri(con_real5.4) 0
 set fmri(con_real5.5) 1.0
 
 # Real contrast_real vector 5 element 6
-set fmri(con_real5.6) 0
+set fmri(con_real5.6) 0.0
 
 # Real contrast_real vector 5 element 7
 set fmri(con_real5.7) 0
@@ -2300,10 +2300,10 @@ set fmri(conname_real.6) "group neg"
 set fmri(con_real6.1) -1.0
 
 # Real contrast_real vector 6 element 2
-set fmri(con_real6.2) 0.0
+set fmri(con_real6.2) 0
 
 # Real contrast_real vector 6 element 3
-set fmri(con_real6.3) 0.0
+set fmri(con_real6.3) 0
 
 # Real contrast_real vector 6 element 4
 set fmri(con_real6.4) 0
@@ -2315,7 +2315,7 @@ set fmri(con_real6.5) 0
 set fmri(con_real6.6) 0.0
 
 # Real contrast_real vector 6 element 7
-set fmri(con_real6.7) 0
+set fmri(con_real6.7) 0.0
 
 # Display images for contrast_real 7
 set fmri(conpic_real.7) 1
@@ -2324,16 +2324,16 @@ set fmri(conpic_real.7) 1
 set fmri(conname_real.7) "strat neg"
 
 # Real contrast_real vector 7 element 1
-set fmri(con_real7.1) 0.0
+set fmri(con_real7.1) 0
 
 # Real contrast_real vector 7 element 2
 set fmri(con_real7.2) -1.0
 
 # Real contrast_real vector 7 element 3
-set fmri(con_real7.3) 0.0
+set fmri(con_real7.3) 0
 
 # Real contrast_real vector 7 element 4
-set fmri(con_real7.4) 0.0
+set fmri(con_real7.4) 0
 
 # Real contrast_real vector 7 element 5
 set fmri(con_real7.5) 0
@@ -2354,13 +2354,13 @@ set fmri(conname_real.8) "su neg"
 set fmri(con_real8.1) 0.0
 
 # Real contrast_real vector 8 element 2
-set fmri(con_real8.2) 0.0
+set fmri(con_real8.2) 0
 
 # Real contrast_real vector 8 element 3
 set fmri(con_real8.3) -1.0
 
 # Real contrast_real vector 8 element 4
-set fmri(con_real8.4) 0.0
+set fmri(con_real8.4) 0
 
 # Real contrast_real vector 8 element 5
 set fmri(con_real8.5) 0
@@ -2384,7 +2384,7 @@ set fmri(con_real9.1) 0
 set fmri(con_real9.2) 0.0
 
 # Real contrast_real vector 9 element 3
-set fmri(con_real9.3) 0.0
+set fmri(con_real9.3) 0
 
 # Real contrast_real vector 9 element 4
 set fmri(con_real9.4) -1.0
@@ -2414,7 +2414,7 @@ set fmri(con_real10.2) 0
 set fmri(con_real10.3) 0.0
 
 # Real contrast_real vector 10 element 4
-set fmri(con_real10.4) 0.0
+set fmri(con_real10.4) 0
 
 # Real contrast_real vector 10 element 5
 set fmri(con_real10.5) -1.0

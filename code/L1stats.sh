@@ -20,12 +20,28 @@ sm=5
 sub=$1
 run=$2
 ppi=$3 # 0 for activation, otherwise seed region or network
-model=19
+model=1
 
 # sub 1243 has a slightly different mask due to different dimensions (SAR limit exceeded)
 
 if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'NAcc-bin'] ]; then
+type="ppi_seed-NAcc-bin"
 maskname="NAcc-1243-bin"
+echo "Mask for 1243 is $maskname"
+else
+maskname=$3
+fi
+
+#if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'ifg_extracted'] ]; then
+#maskname="ifg-1243"
+#echo "Mask for 1243 is $maskname"
+#else
+#maskname=$3
+#fi
+
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'insula_extracted'] ]; then
+type="ppi_seed-insula_extracted"
+maskname="insula-1243"
 echo "Mask for 1243 is $maskname"
 else
 maskname=$3
@@ -142,9 +158,11 @@ else # otherwise, do activation and seed-based ppi
 	if [ "$ppi" == "0" ]; then
 		TYPE=act
 		OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-${TYPE}_run-${run}_sm-${sm}
+		type=act
 	else
 		TYPE=ppi
 		OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-${TYPE}_seed-${ppi}_run-${run}_sm-${sm}
+		type=seed-${ppi}
 	fi
 
 	# check for output and skip existing
@@ -215,8 +233,8 @@ ln -s $FSLDIR/etc/flirtsch/ident.mat ${OUTPUT}.feat/reg/standard2example_func.ma
 
 # reslice correctly for the one weird case
 if [ $sub -eq 1243 ] && [ $run -eq 1 ]; then
-     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${TYPE}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
-   
+     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${type}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
+
 else
      ln -s ${OUTPUT}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
 fi
