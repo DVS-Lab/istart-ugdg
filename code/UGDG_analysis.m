@@ -197,15 +197,15 @@ UG_P_Prop = [];
 
 for jj = 1:length(subjects)
     save_value = [];
-    
+
     name = ['Subject_' num2str(subjects(jj)) '_UGP.csv'];
     input = [input_folder,name];
     T = readtable(input);
     UG_P_Offers = [UG_P_Offers; mean(T.Choice)]; % AMOUNT OFFERED!!!
     UG_P_Offers_Prop = [UG_P_Offers; mean(T.Choice)];
-    
+
     UG_Part = [];
-    
+
     for kk = 1:length(T.Trial)
         if T.Decision(kk) == 1
             save = T.More_Prop(kk);
@@ -213,37 +213,45 @@ for jj = 1:length(subjects)
             save = T.Less_Prop(kk);
         end
         UG_Part = [UG_Part; save];
-        
+
     end
     UG_P_Prop = [UG_P_Prop; mean(UG_Part)];
     UG_P_Earnings = [UG_P_Earnings; sum(T.Endowment)-sum(T.Choice)]; % AMOUNT SAVED for self, uncorrected for rejections.
-  
-end
 
-UG_P_Prop_2 = [];
+    UG_P_Prop_2 = [];
 
-for jj = 1:length(subjects)
-    save_value = [];
-    name = ['Subject_' num2str(subjects(jj)) '_UGP2.csv'];
-    input = [input_folder,name];
-    S = readtable(input);
-    
-    UG_Part = [];
-    
-    for kk = 1:length(T.Trial)
-        if T.Decision(kk) == 1
-            save = T.More_Prop(kk);
-        else
-            save = T.Less_Prop(kk);
+    try
+        save_value = [];
+        name = ['Subject_' num2str(subjects(jj)) '_UGP2.csv'];
+        input = [input_folder,name];
+        S = readtable(input);
+
+        UG_Part = [];
+
+        for kk = 1:length(T.Trial)
+            if T.Decision(kk) == 1
+                save = T.More_Prop(kk);
+            else
+                save = T.Less_Prop(kk);
+            end
+            UG_Part = [UG_Part; save];
+
         end
-        UG_Part = [UG_Part; save];
-        
+     offer_2 = mean(S.Choice);
+     earnings_2 = sum(S.Endowment)-sum(S.Choice);
+    catch
+        disp('missing second run')
+        UG_Part = NaN;
+        offer_2 = NaN;
+        earnings_2 = NaN;
+
+
     end
-    
-    UG_P_Prop_2 = [UG_P_Prop_2; mean(UG_Part)];
-    UG_P_Offers_2 = [UG_P_Offers_2;mean(S.Choice)]; % AMOUNT OFFERED!!!
-    UG_P_Earnings_2 = [UG_P_Earnings_2; sum(S.Endowment)-sum(S.Choice)]; % AMOUNT SAVED for self, uncorrected for rejections.
-    
+
+        UG_P_Prop_2 = [UG_P_Prop_2; mean(UG_Part)];
+        UG_P_Offers_2 = [UG_P_Offers_2;offer_2]; % AMOUNT OFFERED!!!
+        UG_P_Earnings_2 = [UG_P_Earnings_2; earnings_2]; % AMOUNT SAVED for self, uncorrected for rejections.
+ 
 end
 
 UG_P_Raw_Props = ((UG_P_Prop+UG_P_Prop_2)/2);

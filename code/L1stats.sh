@@ -32,12 +32,12 @@ else
 maskname=$3
 fi
 
-#if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'ifg_extracted'] ]; then
-#maskname="ifg-1243"
-#echo "Mask for 1243 is $maskname"
-#else
-#maskname=$3
-#fi
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'IFG_extracted'] ]; then
+maskname="IFG-1243_extracted"
+echo "Mask for 1243 is $maskname"
+else
+maskname=$3
+fi
 
 if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'insula_extracted'] ]; then
 type="ppi_seed-insula_extracted"
