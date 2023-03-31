@@ -24,28 +24,31 @@ model=1
 
 # sub 1243 has a slightly different mask due to different dimensions (SAR limit exceeded)
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'NAcc-bin'] ]; then
-type="ppi_seed-NAcc-bin"
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3='NAcc-bin'] ]; then
+name="ppi_seed-NAcc-bin"
 maskname="NAcc-1243-bin"
 echo "Mask for 1243 is $maskname"
 else
 maskname=$3
+echo "Using mask $maskname"
 fi
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'IFG_extracted'] ]; then
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3='IFG_extracted'] ]; then
+name="ppi_seed-IFG_extracted"
 maskname="IFG-1243_extracted"
 echo "Mask for 1243 is $maskname"
 else
 maskname=$3
+echo "Using mask $maskname"
 fi
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'insula_extracted'] ]; then
-type="ppi_seed-insula_extracted"
-maskname="insula-1243"
-echo "Mask for 1243 is $maskname"
-else
-maskname=$3
-fi
+#if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3 == 'insula_extracted'] ]; then
+#type="ppi_seed-insula_extracted"
+#maskname="insula-1243"
+#echo "Mask for 1243 is $maskname"
+#else
+#maskname=$3
+#fi
 
 # set inputs and general outputs (should not need to chage across studies in Smith Lab)
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
@@ -233,7 +236,7 @@ ln -s $FSLDIR/etc/flirtsch/ident.mat ${OUTPUT}.feat/reg/standard2example_func.ma
 
 # reslice correctly for the one weird case
 if [ $sub -eq 1243 ] && [ $run -eq 1 ]; then
-     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${type}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
+     cp ${maindir}/derivatives/fsl/sub-1004/L1_task-${TASK}_model-${model}_type-${name}_run-1_sm-${sm}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz
 
 else
      ln -s ${OUTPUT}.feat/mean_func.nii.gz ${OUTPUT}.feat/reg/standard.nii.gz

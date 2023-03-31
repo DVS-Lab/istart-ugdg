@@ -1,10 +1,14 @@
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1003/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1004/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1006/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1009/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1010/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1011/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1012/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1013/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1015/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
-To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1016/L2_task-ugdg_model-1_type-ppi_seed-NAcc-bin_sm-5.gfeat/report_log.html
+To view the FEAT progress and final report, point your web browser at /data/projects/istart-ugdg/derivatives/fsl/sub-1243/L2_task-ugdg_model-1_type-ppi_seed-IFG-extracted_sm-5.gfeat/report_log.html
+couldn't read file "/data/projects/istart-ugdg/derivatives/fsl/sub-1243/L1_task-ugdg_model-1_type-ppi_seed-IFG-extracted_run-1_sm-5.feat/design.fsf": no such file or directory
+    while executing
+"source ${featdir}/design.fsf"
+    (procedure "feat5:getconname" line 2)
+    invoked from within
+"feat5:getconname $ff_one $nci "
+    invoked from within
+"if { $done_something == 0 } {
+
+    if { ! $fmri(inmelodic) } {
+       if { $fmri(level) == 1 } {
+	      for { set session 1 } { $session <= $fmri(mult..."
+    (file "/usr/share/fsl/6.0.4/bin/feat" line 390)

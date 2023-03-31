@@ -24,22 +24,23 @@ cov_dir ='/data/projects/istart-ugdg/derivatives/fsl/covariates/'; % Input for c
 %ATTITUDES = readtable([cov_dir 'final_output_attitudes.xls']); % N = 45 (PNR, TEIQUE)
 %SUBSTANCE = readtable([cov_dir 'final_output_substance_AUDIT.xls']); % N = 46 (AUDIT, DUDIT)
 COMPOSITE = readtable([cov_dir 'final_output_composite.xls']); % N = 54 (REWARD and SUBSTANCE)
+STRATEGIC = readtable([codedir '/strategic_behavior.xls']);
 
 % Inputs into scatterplots.
 
 % Strategic_Behavior	Composite_Substance	 Composite_Reward	Composite_Reward_Squared	Composite_SubstanceXReward	Composite_SubstanceXReward_Squared
 
-ID_Measure_1 = COMPOSITE.Composite_SubstanceXReward;
-ID_Measure_1_name=' Composite_SubstanceXReward';
-ID_Measure_2 = COMPOSITE.Composite_SubstanceXReward_Squared;
-ID_Measure_2_name=' Composite_SubstanceXReward_Squared'
-rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-pTPJ-bin' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+ID_Measure_1 = STRATEGIC.Percent; %COMPOSITE.Composite_SubstanceXReward;
+ID_Measure_1_name= ' Percentile';
+ID_Measure_2 = STRATEGIC.Raw; %COMPOSITE.Composite_SubstanceXReward_Squared;
+ID_Measure_2_name=' Raw Earnings';%' Composite_SubstanceXReward_Squared'
+rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-pTPJ-bin' 'seed-SPL-thr'};% 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
 models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
 
 % Test hypotheses:
 
-H2 = 0; % Modulated and unmodulated cue activation. 
-H3 = 1; % Modulated and unmodulated choice activation. 
+H2 = 1; % Modulated and unmodulated cue activation. 
+H3 = 0; % Modulated and unmodulated choice activation. 
 H4 = 0; % Modulated and unmodulated NaCC PPI. 
 H4_plot = 0; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
 H5 = 0; % Modulated and unmodulated analysis of ECN.

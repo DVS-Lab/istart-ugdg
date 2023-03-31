@@ -1,3 +1,4 @@
+[Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information, click <a href="matlab:opengl('problems')">here</a>.] 
 seed-NAcc-thr DGP different from zero?
 
 h =
