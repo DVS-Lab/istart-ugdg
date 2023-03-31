@@ -163,6 +163,9 @@ clc
             outname2= fullfile([outputdir roi model 'scatterplots']);
             saveas(gca, fullfile(outname2), 'svg');
             
+            Delta = DGP - UGP
+            [R,P] = corr(Delta, ID_Measure_2)
+            
         end  
     end
     
