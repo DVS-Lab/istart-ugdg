@@ -1,0 +1,22 @@
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('strjoin')" style="font-weight:bold">strjoin</a>
+First input must be a string array or cell array of character vectors.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot_ugdg', '/data/projects/istart-ugdg/code/plot_ugdg.m', 50)" style="font-weight:bold">plot_ugdg</a> (<a href="matlab: opentoline('/data/projects/istart-ugdg/code/plot_ugdg.m',50,0)">line 50</a>)
+            DGP = load(strjoin([roidir,roi,model,cope_DGP], ''));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plotROIdata', '/data/projects/istart-ugdg/code/plotROIdata.m', 96)" style="font-weight:bold">plotROIdata</a> (<a href="matlab: opentoline('/data/projects/istart-ugdg/code/plotROIdata.m',96,0)">line 96</a>)
+        plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
+} 
+plotROIdata
+
+oldroidir =
+
+    '/data/projects/istart-ugdg/derivatives/imaging_plots_old/'
+
+
+rois =
+
+  1×2 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'seed-NAcc-thr'}    {'seed-vmPFC-5mm-thr'}
+
