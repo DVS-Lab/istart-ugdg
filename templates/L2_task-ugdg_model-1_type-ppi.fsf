@@ -373,7 +373,7 @@ set fmri(ortho1.1) 0
 set fmri(evg1.1) 1
 
 # Higher-level EV value for EV 1 and input 2
-set fmri(evg2.1) 0
+set fmri(evg2.1) 1
 
 # Group membership for input 1
 set fmri(groupmem.1) 1

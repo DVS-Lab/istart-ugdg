@@ -46,7 +46,7 @@ maindir="$(dirname "$scriptdir")"
 # base paths
 
 # Inputs
-L3_model_dir=L3_task-ugdg_model-1_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
+L3_model_dir=L3_task-ugdg_model-19_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
 TYPE=act #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
 N=54
 cov=COMPOSITE #_noINT
@@ -57,22 +57,24 @@ model=GLM3
 
 # Set path info
 
-L3_model=L3_model-1_task-ugdg_n${N}-cov-${cov}
+L3_model=L3_model-19_task-ugdg_n${N}-cov-${cov}
 TASK=ugdg
-INPUT=/data/projects/istart-ugdg/derivatives/fsl/COPE/${L3_model_dir}/${L3_model}
-outputdir=${maindir}/derivatives/imaging_plots
+#INPUT=/data/projects/istart-ugdg/derivatives/fsl/COPE/${L3_model_dir}/${L3_model}
+INPUT=/data/projects/istart-ugdg/derivatives/fsl/COPE/L3_model-19_task-ugdg_type-act-n54-cov-COMPOSITE-flame1/L3_model-19_task-ugdg_n54-cov-COMPOSITE # hard code for filtered func as it changes for each type of analsis.
+outputdir=${maindir}/derivatives/imaging_plots_old
 
 mkdir -p $outputdir
 
 # activation: ROI name and other path information
-for ROI in 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin' 'seed-IFG_extracted'; do 
+for ROI in 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin'; do 
 #mask_act-no-int_cope-15_ugrpmod_zstat-14' 'mask_act-no-int_cope-9_ugppmod_zstat-4' 'mask_ppi-no-int_cope-14_ugpchoicepmod_zstat5' 'mask_act-no-int_cope-7_dgpcuepmod_zstat-10' 'mask_ppi-no-int_cope-11_dgppmod_zstat-10'  'mask_ppi-no-int_cope-7_dgpendowpmod_zstat-5'; do  #'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-thr' #'seed-dlPFC-UGR-bin'; do #
 	MASK=${maindir}/masks/${ROI}.nii.gz #masks_jbw3/
 	for COPENUM in 1 2 3 4 5 6 7 8 9 10 11 12; do # act
 		cnum_padded=`zeropad ${COPENUM} 2`
-		#DATA=`ls -1 ${INPUT}-cope-${COPENUM}-*.gfeat/cope1.feat/filtered_func_data.nii.gz` # use normally
-                DATA=/data/projects/istart-ugdg/derivatives/fsl/covariates/zstats_${TYPE}_${cov}/zstats_${TYPE}_cope_${COPENUM}.nii.gz # z scored for parametric analyses.
+		DATA=`ls -1 ${INPUT}-cope-${COPENUM}-*.gfeat/cope1.feat/filtered_func_data.nii.gz` # use normally
+                #DATA=/data/projects/istart-ugdg/derivatives/fsl/covariates/zstats_${TYPE}_${cov}/zstats_${TYPE}_cope_${COPENUM}.nii.gz # z scored for parametric analyses.
 		fslmeants -i $DATA -o ${outputdir}/${ROI}_type-${TYPE}_cov-${cov}_model-${model}_cope-${cnum_padded}.txt -m ${MASK}
+		
 	done
 done
 
