@@ -6,9 +6,9 @@ basedir="$(dirname "$scriptdir")"
 nruns=2
 task=ugdg # edit if necessary
 
-for ppi in "IFG_extracted"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" and "IFG_extracted" for PPI 
+for ppi in "Insula_extracted"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" and "IFG_extracted" for PPI 
 
-	for sub in `cat ${scriptdir}/newsubs.txt`; do 
+	for sub in `cat ${scriptdir}/debugsubs.txt`; do 
 	  for run in `seq $nruns`; do
 
 			# some exceptionsc

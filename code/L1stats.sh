@@ -24,21 +24,27 @@ model=1
 
 # sub 1243 has a slightly different mask due to different dimensions (SAR limit exceeded)
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3='NAcc-bin'] ]; then
+Mask1="NAcc-bin"
+Mask2="IFG_extracted"
+Mask3="Insula_extracted"
+
+if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $ppi = $Mask1 ] ; then
 name="ppi_seed-NAcc-bin"
 maskname="NAcc-1243-bin"
 echo "Mask for 1243 is $maskname"
-else
-maskname=$3
-echo "Using mask $maskname"
-fi
 
-if [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $3='IFG_extracted'] ]; then
+elif [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $ppi = $Mask2 ] ; then
 name="ppi_seed-IFG_extracted"
 maskname="IFG-1243_extracted"
 echo "Mask for 1243 is $maskname"
+
+elif [ $1 -eq 1243 ] && [ $2 -eq 1 ] && [ $ppi = $Mask3 ] ; then
+name="ppi_seed-Insula_extracted"
+maskname="Insula-1243_extracted"
+echo "Mask for 1243 is $maskname"
+
 else
-maskname=$3
+maskname=$ppi
 echo "Using mask $maskname"
 fi
 
@@ -161,7 +167,7 @@ else # otherwise, do activation and seed-based ppi
 	if [ "$ppi" == "0" ]; then
 		TYPE=act
 		OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-${TYPE}_run-${run}_sm-${sm}
-		type=act
+		name=act
 	else
 		TYPE=ppi
 		OUTPUT=${MAINOUTPUT}/L1_task-${TASK}_model-${model}_type-${TYPE}_seed-${ppi}_run-${run}_sm-${sm}
