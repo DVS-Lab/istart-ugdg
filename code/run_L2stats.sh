@@ -5,8 +5,8 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 
 # the "type" variable below is setting a path inside the main script
-for type in "ppi_seed-IFG_extracted"; do # act ppi_seed-Insula_extracted ppi_seed-IFG_extracted ppi_seed-NAcc-bin act nppi-ecn #"ppi_seed-NAcc"
-	for sub in `cat ${scriptdir}/newsubs.txt`; do
+for type in "ppi_seed-NAcc-bin"; do # act ppi_seed-Insula_extracted ppi_seed-IFG_extracted ppi_seed-NAcc-bin act nppi-ecn #"ppi_seed-NAcc"
+	for sub in `cat ${scriptdir}/debugsubs.txt`; do
 
 		# Manages the number of jobs and cores
   	SCRIPTNAME=${maindir}/code/L2stats.sh
