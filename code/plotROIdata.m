@@ -31,32 +31,32 @@ STRATEGIC = readtable([codedir '/strategic_behavior.xls']);
 
 % Strategic_Behavior	Composite_Substance	 Composite_Reward	Composite_Reward_Squared	Composite_SubstanceXReward	Composite_SubstanceXReward_Squared
 
-ID_Measure_1 = STRATEGIC.Percent; %COMPOSITE.Composite_SubstanceXReward;
-ID_Measure_1_name= ' Percentile';
+ID_Measure_1 = STRATEGIC.Raw; %COMPOSITE.Composite_SubstanceXReward;
+ID_Measure_1_name= ' Raw';
 ID_Measure_2 = STRATEGIC.Proportion; %COMPOSITE.Composite_SubstanceXReward_Squared;
 ID_Measure_2_name=' Proportion';%' Composite_SubstanceXReward_Squared'
-rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr'} %'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-IFG_extracted' 'seed-pTPJ-bin' 'seed-SPL-thr'};% 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
+rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin'} %'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-mPFC-thr' 'seed-IFG_extracted' 'seed-pTPJ-bin' 'seed-SPL-thr'};% 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-ppi_seed-IFG_extracted_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
 
 
 % 
 
-DGP_old = load('/data/projects/istart-ugdg/derivatives/imaging_plots_old/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-01.txt');
-UGP_old = load('/data/projects/istart-ugdg/derivatives/imaging_plots_old/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-02.txt');
+%DGP_old = load('/data/projects/istart-ugdg/derivatives/imaging_plots_old/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-01.txt');
+%UGP_old = load('/data/projects/istart-ugdg/derivatives/imaging_plots_old/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-02.txt');
 
-DGP = load('/data/projects/istart-ugdg/derivatives/imaging_plots/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-01.txt');
-UGP = load('/data/projects/istart-ugdg/derivatives/imaging_plots/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-02.txt');
+%DGP = load('/data/projects/istart-ugdg/derivatives/imaging_plots/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-01.txt');
+%UGP = load('/data/projects/istart-ugdg/derivatives/imaging_plots/seed-vmPFC-5mm-thr_type-act_cov-COMPOSITE_model-GLM3_cope-02.txt');
 
 % Test hypotheses:
 
-H2 = 1; % Modulated and unmodulated cue activation. 
+H2 = 0; % Modulated and unmodulated cue activation. 
 H3 = 0; % Modulated and unmodulated choice activation. 
-H4 = 0; % Modulated and unmodulated NaCC PPI. 
+H4 = 1; % Modulated and unmodulated NaCC PPI. 
 H4_plot = 0; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
 H5 = 0; % Modulated and unmodulated analysis of ECN.
 E1 = 0; % Modulated exploratory results for UGR (Ishika analysis)
 
-usenewroidir = 1; % Use new dir.
+usenewroidir = 0; % Use new dir.
 modulated = 1;
 unmodulated = 0;
 
