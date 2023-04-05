@@ -47,7 +47,7 @@ maindir="$(dirname "$scriptdir")"
 
 # Inputs
 L3_model_dir=L3_task-ugdg_model-1_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
-TYPE=seed-NAcc-bin #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
+TYPE=ppi_seed-IFG_extracted #act #ppi_seed-NAcc #nppi-ecn ppi_seed-NAcc-bin
 N=54
 cov=COMPOSITE #_noINT
 
