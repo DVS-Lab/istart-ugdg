@@ -16,7 +16,7 @@ codedir = '/data/projects/istart-ugdg/code'; % Run code from this path.
 addpath(codedir)
 maindir = '/data/projects/istart-ugdg';
 roidir = '/data/projects/istart-ugdg/derivatives/imaging_plots/'; % Results from extractROI script.
-oldroidir = '/data/projects/istart-ugdg/derivatives/imaging_plots_old/'
+oldroidir = '/data/projects/istart-ugdg/derivatives/imaging_plots_old/'; % For debugging and comparison
 resultsdir = '/data/projects/istart-ugdg/derivatives/imaging_plots/results/'; % Output where results will be saved.
 cov_dir ='/data/projects/istart-ugdg/derivatives/fsl/covariates/'; % Input for covariates
 
@@ -35,8 +35,8 @@ ID_Measure_1 = STRATEGIC.Raw; %COMPOSITE.Composite_SubstanceXReward;
 ID_Measure_1_name= ' Raw';
 ID_Measure_2 = STRATEGIC.Proportion; %COMPOSITE.Composite_SubstanceXReward_Squared;
 ID_Measure_2_name=' Proportion';%' Composite_SubstanceXReward_Squared'
-rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin'  'seed-mPFC-thr' 'seed-SPL-thr'};% 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-ppi_seed-NAcc-bin_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc act};
+rois= {'putamen_extracted' 'pTPJ_extracted'}; % 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin'  'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-Insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-ppi_seed-IFG_extracted_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act};
 
 
 % 
