@@ -86,7 +86,7 @@ clc
          
             figure
             
-            subplot(2,3,1)
+            subplot(2,5,1)
             [R,P] = corrcoef(ID_Measure_1, DGP);
             scatter(ID_Measure_1, DGP, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ylabel (['DGP ' roi type], 'FontSize', 12);
@@ -98,7 +98,7 @@ clc
             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
             T.FontSize = 8;
             
-            subplot(2,3,2)
+            subplot(2,5,2)
             [R,P] = corrcoef(ID_Measure_1, UGP);
             scatter(ID_Measure_1, UGP, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ylabel (['UGP ' roi type], 'FontSize', 12);
@@ -110,7 +110,7 @@ clc
             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
             T.FontSize = 8;
             
-            subplot(2,3,3)
+            subplot(2,5,3)
             [R,P] = corrcoef(ID_Measure_1, UGR);
             scatter(ID_Measure_1, UGR, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ylabel (['UGR ' roi type], 'FontSize', 12);
@@ -121,8 +121,32 @@ clc
             str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
             T.FontSize = 8;
+
+            subplot(2,5,4)
+            [R,P] = corrcoef(ID_Measure_1, (DGP-UGP));
+            scatter(ID_Measure_1, (DGP-UGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
+            ylabel (['DG-UG ' roi type], 'FontSize', 12);
+            xlabel  (ID_Measure_1_name, 'FontSize', 12);
+            i = lsline;
+            i.LineWidth = 3.5;
+            i.Color = [0 0 0];
+            str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
+            T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
+            T.FontSize = 8;
+
+            subplot(2,5,5)
+            [R,P] = corrcoef(ID_Measure_1, (UGP-DGP));
+            scatter(ID_Measure_1, (UGP-DGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
+            ylabel (['UG-DG ' roi type], 'FontSize', 12);
+            xlabel  (ID_Measure_1_name, 'FontSize', 12);
+            i = lsline;
+            i.LineWidth = 3.5;
+            i.Color = [0 0 0];
+            str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
+            T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
+            T.FontSize = 8;
             
-            subplot(2,3,4)
+            subplot(2,5,6)
             [R,P] = corrcoef(ID_Measure_2, DGP);
             scatter(ID_Measure_2, DGP, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ax = gca;
@@ -137,7 +161,7 @@ clc
             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
             T.FontSize = 8;
             
-            subplot(2,3,5)
+            subplot(2,5,7)
             [R,P] = corrcoef(ID_Measure_2, UGP);
             scatter(ID_Measure_2, UGP, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ylabel (['UGP ' roi type], 'FontSize', 12);
@@ -149,7 +173,7 @@ clc
             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
             T.FontSize = 8;
             
-            subplot(2,3,6)
+            subplot(2,5,8)
             [R,P] = corrcoef(ID_Measure_2, UGR);
             scatter(ID_Measure_2, UGR, 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
             ylabel (['UGR ' roi type], 'FontSize', 12);
@@ -162,9 +186,37 @@ clc
             T.FontSize = 8;
             outname2= fullfile([outputdir roi model 'scatterplots']);
             saveas(gca, fullfile(outname2), 'svg');
+
+            subplot(2,5,9)
+            [R,P] = corrcoef(ID_Measure_2, (DGP-UGP));
+            scatter(ID_Measure_2, (DGP-UGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
+            ylabel (['DG-UG ' roi type], 'FontSize', 12);
+            xlabel  (ID_Measure_2_name, 'FontSize', 12);
+            i = lsline;
+            i.LineWidth = 3.5;
+            i.Color = [0 0 0];
+            str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
+            T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
+            T.FontSize = 8;
+            outname2= fullfile([outputdir roi model 'scatterplots']);
+            saveas(gca, fullfile(outname2), 'svg');
+
+            subplot(2,5,10)
+            [R,P] = corrcoef(ID_Measure_2, (UGP-DGP));
+            scatter(ID_Measure_2, (UGP-DGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
+            ylabel (['UG-DG ' roi type], 'FontSize', 12);
+            xlabel  (ID_Measure_2_name, 'FontSize', 12);
+            i = lsline;
+            i.LineWidth = 3.5;
+            i.Color = [0 0 0];
+            str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
+            T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
+            T.FontSize = 8;
+            outname2= fullfile([outputdir roi model 'scatterplots']);
+            saveas(gca, fullfile(outname2), 'svg');
             
-            Delta = DGP - UGP
-            [R,P] = corr(Delta, ID_Measure_2)
+            %Delta = DGP - UGP
+            %[R,P] = corr(Delta, ID_Measure_2)
             
         end  
     end
