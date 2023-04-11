@@ -16,7 +16,7 @@ clc
 
 currentdir = pwd;
 output_path = currentdir; % Set output path if you would like.
-motion_input = 'motion_data_input_060222.csv';
+motion_input = 'motion_data_input.xls';
 output_path = [currentdir '/covariates/'];
 strat_input = [currentdir '/output/'];
 
@@ -171,7 +171,7 @@ normedRS = normedRS - mean(normedRS); % demeaned
 Combined_reward = [Composite_final(:,1), normedRS, normedRS.^2]; % Pairs subject numbers with RS scores. 
 Composite_final_output = array2table(Combined_reward(1:end,:),'VariableNames', {'Subject', 'Composite_Reward', 'Composite_Reward_Squared'});
 
-name = ('\Composite_Reward.xlsx');
+name = ('Composite_Reward.xlsx');
 fileoutput = [output_path, name];
 writetable(Composite_final_output, fileoutput); % Save as csv file
 
@@ -243,7 +243,7 @@ figure, hist(comp_SU.^2,50); title('Composite_Squared') % look at your data squa
 Combined_sub = [AUDIT_final(:,1), comp_SU, comp_SU.^2]; % Pairs subject numbers with RS scores. 
 Composite_final_output_substance = array2table(Combined_sub(1:end,:),'VariableNames', {'Subject', 'Composite_Substance', 'Composite_Substance_Squared' });
 
-name = ('\Composite_Substance.xlsx');
+name = ('Composite_Substance.xlsx');
 fileoutput = [output_path, name];
 writetable(Composite_final_output_substance, fileoutput); % Save as csv file
 
@@ -268,17 +268,31 @@ Reward_substance_output = array2table(Reward_substance_final(1:end,:),'VariableN
 % Raw DG needs to be average to account for missed/irregular number of
 % trials. 
 
-DG_P_Raw = [];
+%% Raw DG
+
+DG_P_Earnings = [];
+DG_P_Offers=[];
+DG_P_Prop = [];
+
+for ii = 1:length(subjects);
     
-    for ii = 1:length(subjects)
-        save_value = [];
-        name = [strat_input 'Subject_' num2str(subjects(ii)) '_DGP.csv'];
-        O = readtable(name);
-        O = table2array(O);
-        save_value = [subjects(ii), mean(O(:,3))];
-        DG_P_Raw = [DG_P_Raw; save_value];
-        
+    name = ['Subject_' num2str(subjects(ii)) '_DGP.csv'];
+    input = [strat_input,name];
+    O = readtable(input);
+    DG_Part = [];
+    for kk = 1:length(O.Trial)
+        if O.Decision(kk) == 1
+            save = O.More_Prop(kk);
+        else
+            save = O.Less_Prop(kk);
+        end
+        DG_Part = [DG_Part; save];
     end
+    DG_P_Prop = [DG_P_Prop; mean(DG_Part)];
+    DG_P_Offers = [DG_P_Offers; mean(O.Choice)]; % AMOUNT OFFERED!!!
+    DG_P_Earnings = [DG_P_Earnings; sum(O.Endowment)-sum(O.Choice)]; % AMOUNT SAVED for self.
+    
+end
 
 %% Raw results UG-P
 
@@ -287,51 +301,112 @@ UG_P_2 = [];
 
 Final_save = [];
 UG_P = [];
-UG_P_Total = [];
+%UG_P_Total = [];
 Subjects = [];
 Subjects_2 = [];
+UG_P_Offers = [];
+UG_P_Offers_2 = [];
+UG_P_Earnings  = [];
+UG_P_Earnings_2 = [];
 
-UG_P_Raw = [];
 Final_Subjects =[];
+UG_P_Prop = [];
+UG_P_Prop_2 = [];
 
 for jj = 1:length(subjects)
-   
     save_value = [];
-    name = [strat_input 'Subject_' num2str(subjects(jj)) '_UGP.csv'];
-    
-    T = readtable(name);
-    UG_P = table2array(T);
-    
-    total_save_2= [];
-    saveme_2 = [];
-    save_value = [subjects(jj), mean(UG_P(:,3))];
-    UG_P_Raw = [UG_P_Raw; save_value];
-    UG_P_Raw = abs(UG_P_Raw);
 
+    name = ['Subject_' num2str(subjects(jj)) '_UGP.csv'];
+    input = [strat_input,name];
+    T = readtable(input);
+    UG_P_Offers = [UG_P_Offers; mean(T.Choice)]; % AMOUNT OFFERED!!!
+    UG_P_Offers_Prop = [UG_P_Offers; mean(T.Choice)];
+
+    UG_Part = [];
+
+    for kk = 1:length(T.Trial)
+        if T.Decision(kk) == 1
+            save = T.More_Prop(kk);
+        else
+            save = T.Less_Prop(kk);
+        end
+        UG_Part = [UG_Part; save];
+
+    end
+    UG_P_Prop = [UG_P_Prop; mean(UG_Part)];
+    UG_P_Earnings = [UG_P_Earnings; sum(T.Endowment)-sum(T.Choice)]; % AMOUNT SAVED for self, uncorrected for rejections.
+
+
+
+    try
+        save_value = [];
+        name = ['Subject_' num2str(subjects(jj)) '_UGP2.csv'];
+        input = [strat_input,name];
+        S = readtable(input);
+        UG_Part_2 = [];
+
+        for kk = 1:length(T.Trial)
+            if T.Decision(kk) == 1
+                save = T.More_Prop(kk);
+            else
+                save = T.Less_Prop(kk);
+            end
+            UG_Part_2 = [UG_Part_2; save];
+
+        end
+        offers_2 = mean(S.Choice);
+        earnings_2 = sum(S.Endowment)-sum(S.Choice);
+    catch
+        disp('missing second run')
+        UG_Part_2 = NaN;
+        offers_2 = NaN;
+        earnings_2 = NaN;
+
+    end
+
+        UG_P_Prop_2 = [UG_P_Prop_2; mean(UG_Part_2)];
+        UG_P_Offers_2 = [UG_P_Offers_2;offers_2]; % AMOUNT OFFERED!!!
+        UG_P_Earnings_2 = [UG_P_Earnings_2; earnings_2]; % AMOUNT SAVED for self, uncorrected for rejections.
  
 end
 
-UG_P_Raw_2 = [];
+% Average if two runs are good, else keep first run.
+UG_P_Raw_Props = []; 
+UG_P_Raw_Earnings = [];
+UG_P_Raw_Offers = [];
 
-
-for jj = 1:length(subjects)
-  
-        save_value = [];
-        
-        name = [strat_input 'Subject_' num2str(subjects(jj)) '_UGP2.csv'];
-        
-        T = readtable(name);
-        UG_P_2 = table2array(T);
-        
-        save_value = [subjects(jj), mean(UG_P_2(:,3))];
-        UG_P_Raw_2 = [UG_P_Raw_2; save_value];
-        UG_P_Raw_2 = abs(UG_P_Raw_2);
-
+for kk = 1:length(UG_P_Prop_2)
+    test = UG_P_Prop_2(kk);
+    if test > 0
+        UG_P_Raw_Props = [UG_P_Raw_Props; (UG_P_Prop(kk)+UG_P_Prop_2(kk))/2];
+        UG_P_Raw_Offers = [UG_P_Raw_Offers; (UG_P_Offers(kk)+UG_P_Offers_2(kk))/2];
+        %UG_P_Raw_Earnings = [UG_P_Earnings; UG_P_Earnings(kk) + UG_P_Earnings_2(kk)];
+    else
+        % Just take the first run
+        UG_P_Raw_Props = [UG_P_Raw_Props; UG_P_Prop(kk)];
+        UG_P_Raw_Offers = [UG_P_Raw_Offers; UG_P_Offers(kk)];
+       % UG_P_Raw_Earnings = [UG_P_Raw_Earnings; UG_P_Earnings(kk)];
+    end
 end
+    
 
-UG_P_Raw_use = ((UG_P_Raw_2(:,2) + UG_P_Raw(:,2))/2);
+%UG_P_Raw_Props = ((UG_P_Prop+UG_P_Prop_2)/2);
+%UG_P_Raw_Offers = (UG_P_Offers+UG_P_Offers_2/2); % Sum offers
+%UG_P_Raw_Earnings = UG_P_Earnings + UG_P_Earnings_2; % Uncorrected
 
-Strategic_Behavior = UG_P_Raw_use - DG_P_Raw(:,2);
+%% Export several measures of strategic behavior
+
+% Percent change from DG to UG
+
+PercentChange = ((UG_P_Raw_Offers- DG_P_Offers)./ DG_P_Offers)*100;
+
+% Monetary values
+
+MonetaryDifference = UG_P_Raw_Offers- DG_P_Offers;
+
+% Proportion difference in offer
+
+Strategic_Behavior = UG_P_Raw_Props- DG_P_Prop;
 
 % Demean strategic behavior
 
@@ -339,6 +414,12 @@ demeaned_Strategic_Behavior = Strategic_Behavior - mean(Strategic_Behavior);
 
 demeaned_Strategic_Behavior_output = array2table(demeaned_Strategic_Behavior(1:end,:),'VariableNames', {'Strategic_Behavior'});
 
+% Generate reward sensitivity interaction measure
+
+strat_int = [demeaned_Strategic_Behavior_output.Strategic_Behavior.*Composite_final_output.Composite_Reward, demeaned_Strategic_Behavior_output.Strategic_Behavior.*Composite_final_output.Composite_Reward_Squared];
+demeaned_strat_int = strat_int - mean(strat_int);
+
+demeaned_Strategic_int_output = array2table(demeaned_strat_int(1:end,:),'VariableNames', {'StrategicXReward' 'StrategicXReward_Squared'});
 
 
 %% Combine into comprehensive set of IDs
@@ -358,9 +439,15 @@ if L == 1
     delete(dest_path)
 end
 
-name = ('final_output_composite.xls');
+final_output_strat_int = [motion_data_output(:,'Subject'), ones_output(:,'Ones'), demeaned_Strategic_Behavior_output(:,'Strategic_Behavior'), Reward_substance_output(:,'Composite_Substance'), Reward_substance_output(:,'Composite_Reward'), Reward_substance_output(:,'Composite_Reward_Squared'), demeaned_Strategic_int_output(:,'StrategicXReward'), demeaned_Strategic_int_output(:,'StrategicXReward_Squared'), motion_data_output(:,'tsnr'), motion_data_output(:,'fd_mean')];
+
+dest_path = [output_path, 'final_output_strat_int.xls'];
+[L] = isfile(dest_path);
+if L == 1
+    delete(dest_path)
+end
+
+name = ('final_output_strat_int.xls');
 fileoutput = [output_path, name];
-writetable(final_output_reward, fileoutput); % Save as csv file
-
-
+writetable(final_output_strat_int, fileoutput); % Save as csv file
 
