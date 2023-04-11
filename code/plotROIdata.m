@@ -35,8 +35,8 @@ ID_Measure_1 = STRATEGIC.Raw;  %STRATEGIC.Raw;
 ID_Measure_1_name= ' Raw';
 ID_Measure_2 = COMPOSITE.Composite_Reward_Squared; %STRATEGIC.Proportion; %
 ID_Measure_2_name=' Int';%' Composite_SubstanceXReward_Squared'
-rois= {'seed-PCC_abb_extracted'}; % 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin'  'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-Insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-ppi_seed-IFG_extracted_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
+rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
 
 
 % 
