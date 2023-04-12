@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # define atlas
-atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-2mm.nii.gz #change sub to cort for cortical vs. subcortical.
+#atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-2mm.nii.gz #change sub to cort for cortical vs. subcortical.
 
 
-#atlas=/usr/share/fsl/data/atlases/MarsTPJParcellation/TPJ_thr25_2mm.nii.gz
+atlas=/usr/share/fsl/data/atlases/MarsTPJParcellation/TPJ_thr25_2mm.nii.gz
 
 # use atlas in mask directory for TPJ.
 
@@ -13,7 +13,7 @@ atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50
 
 # Reference "Making ROIs" Slab page on DVS page.
 
-fslmaths $atlas -thr 2 -uthr 2 -bin pTPJ_50
+fslmaths $atlas -thr 1 -uthr 1 -bin aTPJ_25
 #fslmaths $atlas -thr 29 -uthr 29 -bin anterior_cingulate_gyrus_50
 #fslmaths $atlas -thr 18 -uthr 18 -bin superior_parietal_lobule_50
 #fslmaths $atlas -thr 2 -uthr 2 -bin insular_cortex_50
