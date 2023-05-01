@@ -1,0 +1,158 @@
+Angular_extracted DGP different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.7950
+
+
+ci =
+
+   -0.2826
+    0.2175
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.2611
+       df: 53
+       sd: 0.9161
+
+Angular_extracted UGP different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.6819
+
+
+ci =
+
+   -0.2763
+    0.1821
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.4121
+       df: 53
+       sd: 0.8397
+
+Angular_extracted UGR different from zero?
+
+h =
+
+     0
+
+
+p =
+
+    0.7646
+
+
+ci =
+
+   -0.1952
+    0.2641
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 0.3010
+       df: 53
+       sd: 0.8415
+
+Angular_extracted DGP > UGP?
+
+h =
+
+     0
+
+
+p =
+
+    0.9349
+
+
+ci =
+
+   -0.3406
+    0.3697
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 0.0821
+       df: 53
+       sd: 1.3013
+
+Angular_extracted DGP > UGR?
+
+h =
+
+     0
+
+
+p =
+
+    0.7173
+
+
+ci =
+
+   -0.4364
+    0.3023
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -0.3639
+       df: 53
+       sd: 1.3533
+
+Angular_extracted DGP, UGP, and/or UGR different?
+
+p =
+
+    0.8728
+
+
+tb1 =
+
+  4×6 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Source' }    {'SS'      }    {'df' }    {'MS'      }    {'F'       }    {'Prob>F'  }
+    {'Columns'}    {[  0.2044]}    {[  2]}    {[  0.1022]}    {[  0.1361]}    {[  0.8728]}
+    {'Error'  }    {[119.3724]}    {[159]}    {[  0.7508]}    {0×0 double}    {0×0 double}
+    {'Total'  }    {[119.5768]}    {[161]}    {0×0 double}    {0×0 double}    {0×0 double}
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    gnames: [3×1 char]
+         n: [54 54 54]
+    source: 'anova1'
+     means: [-0.0326 -0.0471 0.0345]
+        df: 159
+         s: 0.8665
+

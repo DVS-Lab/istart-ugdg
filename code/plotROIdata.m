@@ -24,7 +24,7 @@ cov_dir ='/data/projects/istart-ugdg/derivatives/fsl/covariates/'; % Input for c
 %REWARD = readtable([cov_dir 'final_output_reward.xls']); % N = 50 (BAS, SPSRQ)
 %ATTITUDES = readtable([cov_dir 'final_output_attitudes.xls']); % N = 45 (PNR, TEIQUE)
 %SUBSTANCE = readtable([cov_dir 'final_output_substance_AUDIT.xls']); % N = 46 (AUDIT, DUDIT)
-COMPOSITE = readtable([cov_dir 'final_output_composite.xls']); % N = 54 (REWARD and SUBSTANCE)
+COMPOSITE = readtable([cov_dir 'final_output_strat_int.xls']); % N = 54 (REWARD and SUBSTANCE)
 STRATEGIC = readtable([codedir '/strategic_behavior.xls']);
 
 % Inputs into scatterplots.
@@ -33,10 +33,10 @@ STRATEGIC = readtable([codedir '/strategic_behavior.xls']);
 
 ID_Measure_1 = STRATEGIC.Proportion;  %STRATEGIC.Raw Proportion;
 ID_Measure_1_name= ' Proportion';
-ID_Measure_2 = COMPOSITE.Composite_Reward_Squared; %STRATEGIC.Proportion; %
+ID_Measure_2 = COMPOSITE.StrategicXReward; %STRATEGIC.Proportion; %
 ID_Measure_2_name=' Int';%' Composite_SubstanceXReward_Squared'
-rois= {'IFG_extracted' 'Insula_extracted'}; % 'pTPJ_extracted' 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr'};% 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-ppi_seed-Insula_extracted_cov-COMPOSITE_model-GLM3_']}; % ppi_seed-IFG_extracted 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
+rois= {'Angular_extracted'}; % 'pTPJ_extracted' 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr'};% 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-ppi_seed-Insula_extracted_cov-COMPOSITE_wSTRAT_model-GLM3_']}; % ppi_seed-IFG_extracted 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
 
 
 % 
@@ -51,8 +51,8 @@ models = {['_type-ppi_seed-Insula_extracted_cov-COMPOSITE_model-GLM3_']}; % ppi_
 
 H2 = 0; % Modulated and unmodulated cue activation. 
 H3 = 0; % Modulated and unmodulated choice activation. 
-H4 = 0; % Modulated and unmodulated NaCC PPI. 
-H4_plot = 1; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
+H4 = 1; % Modulated and unmodulated NaCC PPI. 
+H4_plot = 0; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
 H5 = 0; % Modulated and unmodulated analysis of ECN.
 E1 = 0; % Modulated exploratory results for UGR (Ishika analysis)
 
