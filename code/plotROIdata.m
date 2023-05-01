@@ -36,7 +36,7 @@ ID_Measure_1_name= ' Proportion';
 ID_Measure_2 = COMPOSITE.Composite_Reward_Squared; %STRATEGIC.Proportion; %
 ID_Measure_2_name=' Int';%' Composite_SubstanceXReward_Squared'
 rois= {'IFG_extracted' 'Insula_extracted'}; % 'pTPJ_extracted' 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr'};% 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % ppi_seed-IFG_extracted 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
+models = {['_type-ppi_seed-Insula_extracted_cov-COMPOSITE_model-GLM3_']}; % ppi_seed-IFG_extracted 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
 
 
 % 
