@@ -13,7 +13,7 @@ atlas=/usr/share/fsl/data/atlases/MarsTPJParcellation/TPJ_thr25_2mm.nii.gz
 
 # Reference "Making ROIs" Slab page on DVS page.
 
-fslmaths $atlas -thr 1 -uthr 1 -bin aTPJ_25
+fslmaths $atlas -thr 2 -uthr 2 -bin aTPJ_25
 #fslmaths $atlas -thr 29 -uthr 29 -bin anterior_cingulate_gyrus_50
 #fslmaths $atlas -thr 18 -uthr 18 -bin superior_parietal_lobule_50
 #fslmaths $atlas -thr 2 -uthr 2 -bin insular_cortex_50

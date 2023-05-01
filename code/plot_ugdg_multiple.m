@@ -50,7 +50,7 @@ clc
         roi = rois{r};
 
 
-        DGP = load(strjoin([roidir,roi,models,Cope_DGP], ''));
+        DGP= load(strjoin([roidir,roi,models,Cope_DGP], ''));
         UGP= load(strjoin([roidir,roi,models,Cope_UGP], ''));
 
         Cope_DGP_use = [Cope_DGP_use, DGP];
@@ -58,17 +58,19 @@ clc
 
     end
 
-    ROI1 = [Cope_DGP_use(:,1) Cope_UGP_use(:,1)];
+    ROI1 = [Cope_DGP_use(:,1), Cope_UGP_use(:,1)];
     ROI2 = [Cope_DGP_use(:,2), Cope_UGP_use(:,2)];
-    ROI3 = [Cope_DGP_use(:,3), Cope_UGP_use(:,3)];
-    ROI4 = [Cope_DGP_use(:,4), Cope_UGP_use(:,4)];
+    %ROI3 = [Cope_DGP_use(:,3), Cope_UGP_use(:,3)];
+    %ROI4 = [Cope_DGP_use(:,4), Cope_UGP_use(:,4)];
    
 
         for m = 1:length(models)
             model = models{m};
             roi = rois{1};
         
-            figure, barweb_dvs2([mean(ROI1); mean(ROI2); mean(ROI3); ; mean(ROI4)], [std(ROI1)/sqrt(length(ROI1)); std(ROI2)/sqrt(length(ROI2));std(ROI3)/sqrt(length(ROI3));std(ROI4)/sqrt(length(ROI4))]);
+            %figure, barweb_dvs2([mean(ROI1); mean(ROI2); mean(ROI3); mean(ROI4)], [std(ROI1)/sqrt(length(ROI1)); std(ROI2)/sqrt(length(ROI2));std(ROI3)/sqrt(length(ROI3));std(ROI4)/sqrt(length(ROI4))]);
+            figure, barweb_dvs2([mean(ROI1); mean(ROI2)], [std(ROI1)/sqrt(length(ROI1)); std(ROI2)/sqrt(length(ROI2))]);
+            
             xlabel('Task Condition');
             xticks([0.8, 1.2, 2,2.2]);
             xticklabels({'DGP','UGP', 'DGP', 'UGP'});

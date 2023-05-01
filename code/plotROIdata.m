@@ -31,12 +31,12 @@ STRATEGIC = readtable([codedir '/strategic_behavior.xls']);
 
 % Strategic_Behavior	Composite_Substance	 Composite_Reward	Composite_Reward_Squared	Composite_SubstanceXReward	Composite_SubstanceXReward_Squared
 
-ID_Measure_1 = STRATEGIC.Raw;  %STRATEGIC.Raw;
-ID_Measure_1_name= ' Raw';
+ID_Measure_1 = STRATEGIC.Proportion;  %STRATEGIC.Raw Proportion;
+ID_Measure_1_name= ' Proportion';
 ID_Measure_2 = COMPOSITE.Composite_Reward_Squared; %STRATEGIC.Proportion; %
 ID_Measure_2_name=' Int';%' Composite_SubstanceXReward_Squared'
-rois= {'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
-models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
+rois= {'IFG_extracted' 'Insula_extracted'}; % 'pTPJ_extracted' 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr'};% 'seed-pTPJ-bin' 'seed-mPFC-thr' 'seed-SPL-thr' 'seed-ACC-50-thr' 'seed-insula-thr'  'seed-dlPFC-thr'}; % 'seed-pTPJ-thr' 'seed-vmPFC-5mm-thr' 'seed-SPL-thr' 'seed-ACC-50-thr'}; % 'seed-dlPFC-UGR-bin' 'seed-ACC-10mm' 
+models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % ppi_seed-IFG_extracted 'nppi-ecn' nppi-ecn ppi_seed-NAcc-bin act ppi_seed-IFG_extracted};
 
 
 % 
@@ -50,9 +50,9 @@ models = {['_type-act_cov-COMPOSITE_model-GLM3_']}; % 'nppi-ecn' nppi-ecn ppi_se
 % Test hypotheses:
 
 H2 = 0; % Modulated and unmodulated cue activation. 
-H3 = 1; % Modulated and unmodulated choice activation. 
+H3 = 0; % Modulated and unmodulated choice activation. 
 H4 = 0; % Modulated and unmodulated NaCC PPI. 
-H4_plot = 0; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
+H4_plot = 1; % Use if plotting multiple ROIs on the same bar plot. Code is crude and can only handle two ROIs.
 H5 = 0; % Modulated and unmodulated analysis of ECN.
 E1 = 0; % Modulated exploratory results for UGR (Ishika analysis)
 
@@ -178,7 +178,7 @@ if H4 == 1
         cope_UGP={'cope-05.txt'};
         cope_UGR={'cope-06.txt'};
         type=' ppi NAcc'; 
-        plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
+        %plot_ugdg(name, roidir, rois, models, cope_DGP, cope_UGP, cope_UGR, type, ID_Measure_1, ID_Measure_2, ID_Measure_1_name, ID_Measure_2_name)
     end
 end
 

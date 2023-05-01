@@ -26,12 +26,12 @@ REPLACEME=$3 # this defines the parts of the path that differ across analyses
 type=${REPLACEME} # For output template
 
 # Variables that change per analysis. Check carefully! 
-covariate=COMPOSITE_wSTRAT #_noINT
+covariate=COMPOSITE_noINT #_noINT
 N=54
-template=L3_task-ugdg_COMPOSITE_wSTRAT_n54_flame1.fsf # L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf
+template=L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf # L3_task-ugdg_COMPOSITE_noINT_n54_flame1.fsf
 
 # Set once and then forget.
-model=1
+model=2
 task=ugdg
 modeltype=flame1
 templatedir="/data/projects/istart-ugdg/templates"
