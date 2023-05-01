@@ -47,7 +47,7 @@ clc
         for m = 1:length(models)
             model = models{m};
            
-            DGP = load(strjoin([roidir,roi,model,cope_DGP], ''));
+            DGP= load(strjoin([roidir,roi,model,cope_DGP], ''));
             UGP= load(strjoin([roidir,roi,model,cope_UGP], ''));
             UGR= load(strjoin([roidir,roi,model,cope_UGR], ''));
 
@@ -217,7 +217,16 @@ clc
             
             %Delta = DGP - UGP
             %[R,P] = corr(Delta, ID_Measure_2)
-            
+
+            DGgUG=DGP-UGP;
+            UGgDG=UGP-DGP;
+
+            output_this=[DGgUG,UGgDG];
+
+            ones_output = array2table(output_this(1:end,:),'VariableNames', {'DGUG','UGDG'});
+            name = ('Insula_UGDG.xls');
+            writetable(ones_output, name); % Save as csv file
+ 
         end  
     end
     
