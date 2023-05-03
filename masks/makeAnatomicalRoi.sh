@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # define atlas
-atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-2mm.nii.gz #change sub to cort for cortical vs. subcortical.
+atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-2mm.nii.gz #change sub to cort for cortical vs. subcortical.
 
 
 #atlas=/usr/share/fsl/data/atlases/MarsTPJParcellation/TPJ_thr25_2mm.nii.gz
@@ -10,11 +10,11 @@ atlas=/usr/share/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-
 
 # Reference "Making ROIs" Slab page on DVS page.
 
-#fslmaths $atlas -thr 2 -uthr 2 -bin insula
+fslmaths $atlas -thr 2 -uthr 2 -bin insula
 #fslmaths $atlas -thr 29 -uthr 29 -bin anterior_cingulate_gyrus_50
 #fslmaths $atlas -thr 18 -uthr 18 -bin superior_parietal_lobule_50
 #fslmaths $atlas -thr 2 -uthr 2 -bin insular_cortex_50
 #fslmaths $atlas -thr 28 -uthr 28 -bin paracingulate_cortex_50
 #fslmaths left_accumbens -add right_accumbens seed-NAcc
-fslmaths $atlas -thr 6 -uthr 6 -bin lputamen
+#fslmaths $atlas -thr 6 -uthr 6 -bin lputamen
 

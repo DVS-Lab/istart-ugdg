@@ -10,8 +10,8 @@ type=$2
 task=ugdg # edit if necessary
 sm=5 # edit if necessary
 MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
-model=1
-NCOPES=16 #Should not be necessary to adjust for PPI.
+model=3
+NCOPES=7 #Should not be necessary to adjust for PPI. 16 normally. 6 for binned act model 7 for ppi
 
 
 # --- start EDIT HERE start: exceptions and conditionals for the task

@@ -227,20 +227,20 @@ clc
             %name = ('Insula_UGDG.xls');
             %writetable(ones_output, name); % Save as csv file
 
-            figure
-
-            [R,P] = corrcoef(ID_Measure_1, (DGP-UGP));
-            scatter(ID_Measure_1, (DGP-UGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
-            ylabel (['DG-UG ' roi type], 'FontSize', 12);
-            xlabel  (ID_Measure_1_name, 'FontSize', 12);
-            i = lsline;
-            i.LineWidth = 3.5;
-            i.Color = [0 0 0];
-            str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
-            T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
-            T.FontSize = 8;
-            outname3='IFG_strat'
-            saveas(gca, fullfile(outname3), 'svg');
+%             figure
+% 
+%             [R,P] = corrcoef(ID_Measure_1, (DGP-UGP));
+%             scatter(ID_Measure_1, (DGP-UGP), 'MarkerEdgeColor',[0 .5 .5],'MarkerFaceColor',[0 .7 .7],'LineWidth',1.5);
+%             ylabel (['DG-UG ' roi type], 'FontSize', 12);
+%             xlabel  (ID_Measure_1_name, 'FontSize', 12);
+%             i = lsline;
+%             i.LineWidth = 3.5;
+%             i.Color = [0 0 0];
+%             str=sprintf([' R=%1.2f' ' P=%1.2f'], [R(1,2) P(1,2)]);
+%             T = text(min(get(gca, 'xlim')), max(get(gca, 'ylim')), str);
+%             T.FontSize = 8;
+%             outname3='IFG_strat'
+%             saveas(gca, fullfile(outname3), 'svg');
  
         end  
     end

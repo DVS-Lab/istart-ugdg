@@ -8,7 +8,7 @@ task=ugdg # edit if necessary
 
 for ppi in "NAcc-bin"; do # putting 0 first will indicate "activation" Put in "NAcc-bin" and "IFG_extracted" for PPI 
 
-	for sub in `cat ${scriptdir}/debugsubs.txt`; do 
+	for sub in `cat ${scriptdir}/newsubs.txt`; do 
 	  for run in `seq $nruns`; do
 
 			# some exceptionsc

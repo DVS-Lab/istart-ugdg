@@ -20,7 +20,7 @@ sm=5
 sub=$1
 run=$2
 ppi=$3 # 0 for activation, otherwise seed region or network
-model=2
+model=3
 
 # sub 1243 has a slightly different mask due to different dimensions (SAR limit exceeded)
 
