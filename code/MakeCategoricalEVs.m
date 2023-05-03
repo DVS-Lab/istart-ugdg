@@ -21,7 +21,7 @@ clc
 Maindir = '/data/projects/istart-ugdg/';
 EVdir = string([Maindir 'derivatives/fsl/EVfiles/']);
 Sub_list = readtable([Maindir 'code/newsubs.txt']); % Import Subject list.
-
+strategic = xlsread([Maindir 'code/strategic_behavior.xls']);
 %% Loop through the subjects in DG
 
 Missing = [];

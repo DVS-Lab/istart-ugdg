@@ -47,9 +47,9 @@ maindir="$(dirname "$scriptdir")"
 
 # Inputs
 L3_model_dir=L3_task-ugdg_model-1_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
-TYPE=act #act #w #nppi-ecn ppi_seed-NAcc-bin
+TYPE=ppi_seed-Insula_extracted #act #w #nppi-ecn ppi_seed-NAcc-bin
 N=54
-cov=COMPOSITE #_noINT
+cov=COMPOSITE_noINT_bin #_noINT
 
 # Outputs
 
@@ -69,7 +69,7 @@ mkdir -p $outputdir
 for ROI in 'seed-insula-bin' 'pTPJ_extracted' 'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin' 'seed-insula-thr'  'seed-insula-thr' 'seed-PCC_abb_extracted' 'seed-PCC_int_extracted' 'IFG_extracted' 'Insula_extracted' 'Angular_extracted' 'AI_extracted'; do 
 #'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-bin' 'seed-insula-thr'  'seed-insula-thr' 'seed-PCC_abb_extracted' 'seed-PCC_int_extracted' 'IFG_extracted' 'Insula_extracted' 'lputamen-bin' mask_act-no-int_cope-15_ugrpmod_zstat-14' 'mask_act-no-int_cope-9_ugppmod_zstat-4' 'mask_ppi-no-int_cope-14_ugpchoicepmod_zstat5' 'mask_act-no-int_cope-7_dgpcuepmod_zstat-10' 'mask_ppi-no-int_cope-11_dgppmod_zstat-10'  'mask_ppi-no-int_cope-7_dgpendowpmod_zstat-5'; do  #'seed-NAcc-thr' 'seed-vmPFC-5mm-thr' 'seed-ACC-50-thr' 'seed-SPL-thr' 'seed-insula-thr'  'seed-mPFC-thr' 'seed-dlPFC-thr' 'seed-pTPJ-thr' #'seed-dlPFC-UGR-bin'; do #
 	MASK=${maindir}/masks/${ROI}.nii.gz #masks_jbw3/
-	for COPENUM in 1 2 3 4 5 6 7 8 9 10 11 12; do # act
+	for COPENUM in 1 2 3 4 5 6; do # act use 7 8 9 10 11 12 for normal extractions
 		cnum_padded=`zeropad ${COPENUM} 2`
 		#DATA=`ls -1 ${INPUT}-cope-${COPENUM}-*.gfeat/cope1.feat/filtered_func_data.nii.gz` # use normally
                 DATA=/data/projects/istart-ugdg/derivatives/fsl/covariates/zstats_${TYPE}_${cov}/zstats_${TYPE}_cope_${COPENUM}.nii.gz # z scored for parametric analyses.
