@@ -49,7 +49,7 @@ maindir="$(dirname "$scriptdir")"
 L3_model_dir=L3_task-ugdg_model-1_COMPOSITE_n54_flame1.fsf #L3_task-ugdg_COMPOSITE_n54_flame1.fsf
 TYPE=ppi_seed-Insula_extracted #act #w #nppi-ecn ppi_seed-NAcc-bin
 N=54
-cov=COMPOSITE_noINT_bin #_noINT
+cov=COMPOSITE_wStrat_bin #_noINT
 
 # Outputs
 
