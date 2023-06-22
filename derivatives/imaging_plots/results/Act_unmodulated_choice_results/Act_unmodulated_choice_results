@@ -1,0 +1,316 @@
+IFG_extracted DGP different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   1.7220e-07
+
+
+ci =
+
+    0.6191
+    1.2387
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 6.0137
+       df: 53
+       sd: 1.1351
+
+IFG_extracted UGP different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   3.5128e-09
+
+
+ci =
+
+    0.7769
+    1.3927
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 7.0674
+       df: 53
+       sd: 1.1280
+
+IFG_extracted UGR different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   1.6434e-06
+
+
+ci =
+
+    0.7509
+    1.6403
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 5.3926
+       df: 53
+       sd: 1.6292
+
+IFG_extracted DGP > UGP?
+
+h =
+
+     0
+
+
+p =
+
+    0.1891
+
+
+ci =
+
+   -0.3909
+    0.0792
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -1.3302
+       df: 53
+       sd: 0.8612
+
+IFG_extracted DGP > UGR?
+
+h =
+
+     0
+
+
+p =
+
+    0.1249
+
+
+ci =
+
+   -0.6097
+    0.0763
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -1.5593
+       df: 53
+       sd: 1.2567
+
+IFG_extracted DGP, UGP, and/or UGR different?
+
+p =
+
+    0.5737
+
+
+tb1 =
+
+  4×6 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Source' }    {'SS'      }    {'df' }    {'MS'      }    {'F'       }    {'Prob>F'  }
+    {'Columns'}    {[  1.9383]}    {[  2]}    {[  0.9692]}    {[  0.5575]}    {[  0.5737]}
+    {'Error'  }    {[276.4024]}    {[159]}    {[  1.7384]}    {0×0 double}    {0×0 double}
+    {'Total'  }    {[278.3407]}    {[161]}    {0×0 double}    {0×0 double}    {0×0 double}
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    gnames: [3×1 char]
+         n: [54 54 54]
+    source: 'anova1'
+     means: [0.9289 1.0848 1.1956]
+        df: 159
+         s: 1.3185
+
+Insula_extracted DGP different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   2.5822e-13
+
+
+ci =
+
+    1.1421
+    1.7391
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 9.6810
+       df: 53
+       sd: 1.0935
+
+Insula_extracted UGP different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   2.9090e-17
+
+
+ci =
+
+    1.5533
+    2.1541
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 12.3778
+       df: 53
+       sd: 1.1005
+
+Insula_extracted UGR different from zero?
+
+h =
+
+     1
+
+
+p =
+
+   1.4012e-16
+
+
+ci =
+
+    1.8964
+    2.6659
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: 11.8914
+       df: 53
+       sd: 1.4097
+
+Insula_extracted DGP > UGP?
+
+h =
+
+     1
+
+
+p =
+
+    0.0015
+
+
+ci =
+
+   -0.6609
+   -0.1653
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -3.3442
+       df: 53
+       sd: 0.9077
+
+Insula_extracted DGP > UGR?
+
+h =
+
+     1
+
+
+p =
+
+   4.4876e-05
+
+
+ci =
+
+   -1.2196
+   -0.4614
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    tstat: -4.4471
+       df: 53
+       sd: 1.3889
+
+Insula_extracted DGP, UGP, and/or UGR different?
+
+p =
+
+    0.0019
+
+
+tb1 =
+
+  4×6 <a href="matlab:helpPopup cell" style="font-weight:bold">cell</a> array
+
+    {'Source' }    {'SS'      }    {'df' }    {'MS'      }    {'F'       }    {'Prob>F'  }
+    {'Columns'}    {[ 19.0759]}    {[  2]}    {[  9.5380]}    {[  6.5119]}    {[  0.0019]}
+    {'Error'  }    {[232.8876]}    {[159]}    {[  1.4647]}    {0×0 double}    {0×0 double}
+    {'Total'  }    {[251.9635]}    {[161]}    {0×0 double}    {0×0 double}    {0×0 double}
+
+
+stats = 
+
+  <a href="matlab:helpPopup struct" style="font-weight:bold">struct</a> with fields:
+
+    gnames: [3×1 char]
+         n: [54 54 54]
+    source: 'anova1'
+     means: [1.4406 1.8537 2.2811]
+        df: 159
+         s: 1.2102
+
